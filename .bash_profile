@@ -1,3 +1,4 @@
+# coloring the terminal comman line
 export EDITOR='sublime -w'
 
 export PS1="\[\033[38;5;202m\]\[\$(parse_git_branch)\]\[$(tput sgr0)\[\]$(tput sgr0)\]\[\033[38;5;31m\]\W\[$(tput sgr0)\]\[\\e[35m\] 🔮  ➠ \[\033[38;5;15m\]\[$(tput sgr0)\]"
