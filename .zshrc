@@ -10,6 +10,8 @@ export ZSH=/Users/zacherdmann/.oh-my-zsh
 ZSH_THEME="bullet-train"
 
 
+
+
 # Theme options
 BULLETTRAIN_PROMPT_CHAR="👉" 
 BULLETTRAIN_RUBY_SHOW="false"
@@ -112,14 +114,24 @@ zstyle ':omz:module:tmux' auto-start 'yes'
 
 export NVM_DIR="/Users/zacherdmann/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
+export HEROKU_ORGANIZATION='upshot'
 
 # General
+alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
+
 alias so='source'
 alias l='ls -Fhp'
 alias ll='ls -Flhp'
 alias la='ls -Fahp'
 alias zshrc='sublime ~/.zshrc'
+alias mkrmt='bb create_from_local --private --owner upshotagency'
+
+alias heroku-stage='heroku create --remote staging-heroku --buildpack https://github.com/AdmitHub/meteor-buildpack-horse'
+
+eval $(thefuck --alias)
+# You can use whatever you want as an alias, like for Mondays:
+eval $(thefuck --alias fuck)
+
 
 # tmux
 alias t="tmux -u"
@@ -128,3 +140,26 @@ alias tat='tmux new-session -As `basename $PWD | sed -e "s/\./-/g"`'
 alias tk='tmux kill-session'
 alias tkall='while true; do tk || break; done'
 alias tmux-set-title='tmux rename-session `basename $PWD | sed -e "s/\./-/g"`'
+
+# love
+alias love="/Applications/love.app/Contents/MacOS/love"
+
+
+# .env loading in the shell
+dotenv () {
+  set -a
+  [ -f ./.env ] && . ./.env
+  set +a
+}
+
+# Run dotenv on login
+dotenv
+
+# Run dotenv on every new directory
+cd () {
+  builtin cd $@
+  dotenv
+}
+
+
+export PATH="$HOME/.yarn/bin:$PATH"

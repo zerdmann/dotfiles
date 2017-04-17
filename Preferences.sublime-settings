@@ -1,58 +1,21 @@
 {
 	"added_words":
 	[
-		"html",
-		"js",
-		"tmp",
-		"Autocomplete",
-		"Hitoshi"
+		"Brebeuf",
+		"Brebeuf's",
+		"Cancerman"
 	],
-	"auto_complete_triggers":
-	[
-		{
-			"characters": "<",
-			"selector": "text.html"
-		},
-		{
-			"characters": ".",
-			"selector": "source.js"
-		}
-	],
-	"bold_folder_labels": true,
-	"color_scheme": "Packages/User/SublimeLinter/Hitoshi (SL).tmTheme",
-	"folder_exclude_patterns":
-	[
-		".git",
-		".sass-cache",
-		".tmp"
-	],
+	"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
 	"font_face": "Input Mono",
-	"font_size": 11,
-	"highlight_line": true,
-	"highlight_modified_tabs": true,
+	"font_size": 13,
 	"ignored_packages":
 	[
-		"ActionScript",
-		"caniuse_local",
-		"CSS",
-		"MarkdownEditing",
-		"MarkdownHighlighting",
-		"Meteor Autocomplete (TernJS)",
-		"React Templates",
-		"SublimeLinter",
-		"TrailingSpaces",
 		"Vintage"
 	],
-	"line_padding_bottom": 1,
-	"line_padding_top": 1,
-	"margin": 4,
-	"open_files_in_new_window": false,
-	"rulers":
+	"ignored_words":
 	[
-		80
+		"Brebuef",
+		"Montaignais"
 	],
-	"scroll_past_end": true,
-	"theme": "Hitoshi.sublime-theme",
-	"trim_trailing_white_space_on_save": true,
-	"word_wrap": true
+	"theme": "Flatgrammer.sublime-theme"
 }
